@@ -52,6 +52,10 @@ namespace QuanLyNhanSu
             this.label9 = new System.Windows.Forms.Label();
             this.dtpE = new System.Windows.Forms.DateTimePicker();
             this.cbEDepartment = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txbESex = new System.Windows.Forms.TextBox();
+            this.txbEIDCard = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +71,7 @@ namespace QuanLyNhanSu
             // 
             // btnAddEmployee
             // 
-            this.btnAddEmployee.Location = new System.Drawing.Point(609, 240);
+            this.btnAddEmployee.Location = new System.Drawing.Point(880, 236);
             this.btnAddEmployee.Name = "btnAddEmployee";
             this.btnAddEmployee.Size = new System.Drawing.Size(120, 47);
             this.btnAddEmployee.TabIndex = 25;
@@ -77,7 +81,7 @@ namespace QuanLyNhanSu
             // 
             // btnEditEmployee
             // 
-            this.btnEditEmployee.Location = new System.Drawing.Point(609, 302);
+            this.btnEditEmployee.Location = new System.Drawing.Point(880, 300);
             this.btnEditEmployee.Name = "btnEditEmployee";
             this.btnEditEmployee.Size = new System.Drawing.Size(120, 47);
             this.btnEditEmployee.TabIndex = 24;
@@ -87,7 +91,7 @@ namespace QuanLyNhanSu
             // 
             // btnDeleteEmployee
             // 
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(609, 355);
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(880, 362);
             this.btnDeleteEmployee.Name = "btnDeleteEmployee";
             this.btnDeleteEmployee.Size = new System.Drawing.Size(120, 47);
             this.btnDeleteEmployee.TabIndex = 23;
@@ -97,7 +101,7 @@ namespace QuanLyNhanSu
             // 
             // txbEName
             // 
-            this.txbEName.Location = new System.Drawing.Point(178, 121);
+            this.txbEName.Location = new System.Drawing.Point(195, 123);
             this.txbEName.Name = "txbEName";
             this.txbEName.Size = new System.Drawing.Size(164, 22);
             this.txbEName.TabIndex = 21;
@@ -114,7 +118,7 @@ namespace QuanLyNhanSu
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(389, 91);
+            this.label4.Location = new System.Drawing.Point(391, 91);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 19;
@@ -123,7 +127,7 @@ namespace QuanLyNhanSu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(175, 91);
+            this.label3.Location = new System.Drawing.Point(192, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 18;
@@ -132,7 +136,7 @@ namespace QuanLyNhanSu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 91);
+            this.label1.Location = new System.Drawing.Point(21, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 17);
             this.label1.TabIndex = 17;
@@ -145,14 +149,14 @@ namespace QuanLyNhanSu
             this.dataNhanVien.Name = "dataNhanVien";
             this.dataNhanVien.RowHeadersWidth = 51;
             this.dataNhanVien.RowTemplate.Height = 24;
-            this.dataNhanVien.Size = new System.Drawing.Size(563, 173);
+            this.dataNhanVien.Size = new System.Drawing.Size(834, 173);
             this.dataNhanVien.TabIndex = 16;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(268, 38);
+            this.label2.Location = new System.Drawing.Point(389, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(199, 26);
             this.label2.TabIndex = 15;
@@ -169,7 +173,7 @@ namespace QuanLyNhanSu
             // 
             // txbEPhone
             // 
-            this.txbEPhone.Location = new System.Drawing.Point(576, 121);
+            this.txbEPhone.Location = new System.Drawing.Point(576, 123);
             this.txbEPhone.Name = "txbEPhone";
             this.txbEPhone.Size = new System.Drawing.Size(123, 22);
             this.txbEPhone.TabIndex = 28;
@@ -249,12 +253,48 @@ namespace QuanLyNhanSu
             this.cbEDepartment.Size = new System.Drawing.Size(158, 24);
             this.cbEDepartment.TabIndex = 38;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(774, 91);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 17);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Giới tính";
+            // 
+            // txbESex
+            // 
+            this.txbESex.Location = new System.Drawing.Point(768, 123);
+            this.txbESex.Name = "txbESex";
+            this.txbESex.Size = new System.Drawing.Size(123, 22);
+            this.txbESex.TabIndex = 41;
+            // 
+            // txbEIDCard
+            // 
+            this.txbEIDCard.Location = new System.Drawing.Point(768, 184);
+            this.txbEIDCard.Name = "txbEIDCard";
+            this.txbEIDCard.Size = new System.Drawing.Size(147, 22);
+            this.txbEIDCard.TabIndex = 42;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(765, 164);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(129, 17);
+            this.label11.TabIndex = 43;
+            this.label11.Text = "Căc cước công dân";
+            // 
             // fEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1059, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txbEIDCard);
+            this.Controls.Add(this.txbESex);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.cbEDepartment);
             this.Controls.Add(this.dtpE);
             this.Controls.Add(this.label9);
@@ -311,5 +351,9 @@ namespace QuanLyNhanSu
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpE;
         private System.Windows.Forms.ComboBox cbEDepartment;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txbESex;
+        private System.Windows.Forms.TextBox txbEIDCard;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -16,7 +16,7 @@ namespace QuanLyNhanSu
         public fSettingAccount()
         {
             InitializeComponent();
-            txbSAUserName.Text = fManager.userName;
+            txbSAUserName.Text = fLogin.userName;
         }
 
         private void btnSABack_Click(object sender, EventArgs e)

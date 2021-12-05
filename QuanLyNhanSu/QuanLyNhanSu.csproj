@@ -53,6 +53,12 @@
     <Compile Include="DAO\DepartmentDao.cs" />
     <Compile Include="DAO\EmployeeDao.cs" />
     <Compile Include="DAO\JobDao.cs" />
+    <Compile Include="fAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAccount.Designer.cs">
+      <DependentUpon>fAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="fContact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fAccount.resx">
+      <DependentUpon>fAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fContact.resx">
       <DependentUpon>fContact.cs</DependentUpon>
     </EmbeddedResource>

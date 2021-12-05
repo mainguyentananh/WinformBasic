@@ -13,15 +13,18 @@ namespace QuanLyNhanSu
 {
     public partial class fManager : Form
     {
-        public static string userName;
-       
+        public Account ac;
         public fManager()
         {
             InitializeComponent();
-            lbAccount.Text = userName;
+            AccountDao acD = new AccountDao();
+            ac = acD.getAccount(fLogin.userName, fLogin.pass);
+            if(ac != null) { 
+            lbAccount.Text = ac.fullname;
+            }
         }
 
-        
+
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
@@ -62,6 +65,20 @@ namespace QuanLyNhanSu
         {
             fStatistic statistic = new fStatistic();
             statistic.ShowDialog();
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+           
+            if (ac.a_role.Equals("admin"))
+            {
+                fAccount fac = new fAccount();
+                fac.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Không có quyền");
+            }
         }
     }
 }

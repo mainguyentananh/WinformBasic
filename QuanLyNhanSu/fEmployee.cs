@@ -41,6 +41,8 @@ namespace QuanLyNhanSu
             this.dataNhanVien.Columns["name"].HeaderText = "Họ Tên";
             this.dataNhanVien.Columns["dob"].HeaderText = "Ngày Sinh";
             this.dataNhanVien.Columns["e_address"].HeaderText = "Địa Chỉ";
+            this.dataNhanVien.Columns["idcard"].HeaderText = "Căn cước công dân";
+            this.dataNhanVien.Columns["sex"].HeaderText = "Giới tính";
             this.dataNhanVien.Columns["phone"].HeaderText = "Số Điện Thoại";
             this.dataNhanVien.Columns["jobID"].HeaderText = "ID Công Việc";
             this.dataNhanVien.Columns["depID"].HeaderText = "ID Phòng Ban";
@@ -56,6 +58,14 @@ namespace QuanLyNhanSu
 
             txbEPhone.DataBindings.Clear();
             txbEPhone.DataBindings.Add(new Binding("Text", this.dataNhanVien.DataSource, "phone", true, DataSourceUpdateMode.Never));
+
+            txbESex.DataBindings.Clear();
+            txbESex.DataBindings.Add(new Binding("Text", this.dataNhanVien.DataSource, "sex", true, DataSourceUpdateMode.Never));
+
+
+            txbEIDCard.DataBindings.Clear();
+            txbEIDCard.DataBindings.Add(new Binding("Text", this.dataNhanVien.DataSource, "idcard", true, DataSourceUpdateMode.Never));
+
 
             txbEAddress.DataBindings.Clear();
             txbEAddress.DataBindings.Add(new Binding("Text", this.dataNhanVien.DataSource, "e_address", true, DataSourceUpdateMode.Never));
@@ -124,10 +134,12 @@ namespace QuanLyNhanSu
             DateTime dob = dtpE.Value;
             string e_address = txbEAddress.Text;
             string phone = txbEPhone.Text;
+            string sex = txbESex.Text;
+            string idcard = txbEIDCard.Text;
             int jobid = (cbEJob.SelectedItem as Job).j_id;
             int depid = (cbEDepartment.SelectedItem as Department).d_id;
-
-            if (edao.addEmployee(name,dob,e_address,phone,jobid,depid))
+            
+            if (edao.addEmployee(name,dob, sex, e_address, idcard,phone,jobid,depid))
             {
                 
                 MessageBox.Show("Thêm thành công");
@@ -147,8 +159,9 @@ namespace QuanLyNhanSu
             string phone = txbEPhone.Text;
             int jobid = (cbEJob.SelectedItem as Job).j_id;
             int depid = (cbEDepartment.SelectedItem as Department).d_id;
-
-            if (edao.editEmployee(e_id,name, dob, e_address, phone, jobid, depid))
+            string sex = txbESex.Text;
+            string idcard = txbEIDCard.Text;
+            if (edao.editEmployee(e_id,name,idcard,sex, dob, e_address, phone, jobid, depid))
             {
 
                 MessageBox.Show("Sửa thành công");

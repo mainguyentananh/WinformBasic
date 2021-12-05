@@ -44,6 +44,7 @@ namespace QuanLyNhanSu
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbAccount = new System.Windows.Forms.Label();
             this.nameAccount = new System.Windows.Forms.Label();
+            this.btnAccount = new System.Windows.Forms.Button();
             this.accountBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
@@ -84,9 +85,9 @@ namespace QuanLyNhanSu
             // 
             // btnDepartment
             // 
-            this.btnDepartment.Location = new System.Drawing.Point(210, 53);
+            this.btnDepartment.Location = new System.Drawing.Point(210, 67);
             this.btnDepartment.Name = "btnDepartment";
-            this.btnDepartment.Size = new System.Drawing.Size(168, 34);
+            this.btnDepartment.Size = new System.Drawing.Size(169, 37);
             this.btnDepartment.TabIndex = 5;
             this.btnDepartment.Text = "Quản lý phòng ban";
             this.btnDepartment.UseVisualStyleBackColor = true;
@@ -94,7 +95,7 @@ namespace QuanLyNhanSu
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnSettingAccount);
+            this.panel1.Controls.Add(this.btnAccount);
             this.panel1.Controls.Add(this.btnContact);
             this.panel1.Controls.Add(this.btnStatistic);
             this.panel1.Controls.Add(this.btnDepartment);
@@ -102,14 +103,14 @@ namespace QuanLyNhanSu
             this.panel1.Controls.Add(this.btnEmployee);
             this.panel1.Location = new System.Drawing.Point(94, 233);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(588, 96);
+            this.panel1.Size = new System.Drawing.Size(588, 117);
             this.panel1.TabIndex = 6;
             // 
             // btnSettingAccount
             // 
-            this.btnSettingAccount.Location = new System.Drawing.Point(17, 53);
+            this.btnSettingAccount.Location = new System.Drawing.Point(25, 47);
             this.btnSettingAccount.Name = "btnSettingAccount";
-            this.btnSettingAccount.Size = new System.Drawing.Size(156, 34);
+            this.btnSettingAccount.Size = new System.Drawing.Size(154, 30);
             this.btnSettingAccount.TabIndex = 9;
             this.btnSettingAccount.Text = "Thiết lập tài khoản";
             this.btnSettingAccount.UseVisualStyleBackColor = true;
@@ -117,9 +118,9 @@ namespace QuanLyNhanSu
             // 
             // btnContact
             // 
-            this.btnContact.Location = new System.Drawing.Point(405, 53);
+            this.btnContact.Location = new System.Drawing.Point(405, 67);
             this.btnContact.Name = "btnContact";
-            this.btnContact.Size = new System.Drawing.Size(157, 34);
+            this.btnContact.Size = new System.Drawing.Size(157, 37);
             this.btnContact.TabIndex = 7;
             this.btnContact.Text = "Liên hệ";
             this.btnContact.UseVisualStyleBackColor = true;
@@ -137,9 +138,9 @@ namespace QuanLyNhanSu
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(83, 33);
+            this.btnLogout.Location = new System.Drawing.Point(209, 47);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(94, 26);
+            this.btnLogout.Size = new System.Drawing.Size(169, 30);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -149,7 +150,7 @@ namespace QuanLyNhanSu
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 8);
+            this.label2.Location = new System.Drawing.Point(104, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 19);
             this.label2.TabIndex = 9;
@@ -157,20 +158,21 @@ namespace QuanLyNhanSu
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnSettingAccount);
             this.panel2.Controls.Add(this.lbAccount);
             this.panel2.Controls.Add(this.nameAccount);
             this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(261, 100);
+            this.panel2.Location = new System.Drawing.Point(203, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(270, 62);
+            this.panel2.Size = new System.Drawing.Size(381, 109);
             this.panel2.TabIndex = 10;
             // 
             // lbAccount
             // 
             this.lbAccount.AutoSize = true;
             this.lbAccount.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAccount.Location = new System.Drawing.Point(143, 8);
+            this.lbAccount.Location = new System.Drawing.Point(206, 15);
             this.lbAccount.Name = "lbAccount";
             this.lbAccount.Size = new System.Drawing.Size(47, 17);
             this.lbAccount.TabIndex = 11;
@@ -183,6 +185,16 @@ namespace QuanLyNhanSu
             this.nameAccount.Name = "nameAccount";
             this.nameAccount.Size = new System.Drawing.Size(0, 17);
             this.nameAccount.TabIndex = 10;
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.Location = new System.Drawing.Point(17, 67);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(164, 37);
+            this.btnAccount.TabIndex = 11;
+            this.btnAccount.Text = "Quản lý tài khoản";
+            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // accountBindingSource1
             // 
@@ -232,5 +244,6 @@ namespace QuanLyNhanSu
         private System.Windows.Forms.Label nameAccount;
         private System.Windows.Forms.BindingSource accountBindingSource1;
         private System.Windows.Forms.Label lbAccount;
+        private System.Windows.Forms.Button btnAccount;
     }
 }

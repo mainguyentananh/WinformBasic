@@ -12,7 +12,10 @@ using System.Windows.Forms;
 namespace QuanLyNhanSu
 {
     public partial class fLogin : Form
-    {      
+    {
+        public static string userName;
+        public static string pass;
+
         public fLogin()
         {
             InitializeComponent();   
@@ -35,11 +38,13 @@ namespace QuanLyNhanSu
         {
             string username = txbUserName.Text;
             string pass = txbPassWord.Text;
-            fManager.userName = username;
+            fLogin.userName = username;
+            fLogin.pass = pass;
             fManager f = new fManager();
             AccountDao account = new AccountDao();
             
             if (account.Login(username, pass)){
+               
                 this.Hide();
                 f.ShowDialog();         
                 this.Show();               
