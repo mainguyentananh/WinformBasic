@@ -22,24 +22,37 @@ namespace QuanLyNhanSu.DAO
 
         public bool addEmployee(string name ,DateTime dob , string sex,string e_address,string idcard,string phone,int jobID, int depID)
         {
-            string connect = "Server=.\\SQLEXPRESS;Database=quanlynhansu;Trusted_Connection=True;";
-            SqlConnection c = new SqlConnection(connect);
-            string sql = "insert into Employee values(@name,@dob,@sex,@e_address,@idcard,@phone,@jobID,@depID)";
-            var result = c.Execute(sql,new {name,dob, sex, e_address, idcard, phone,jobID,depID});
-            if (result >= 1)
-                return true;
+            try
+            {
+                string connect = "Server=.\\SQLEXPRESS;Database=quanlynhansu;Trusted_Connection=True;";
+                SqlConnection c = new SqlConnection(connect);
+                string sql = "insert into Employee values(@name,@dob,@sex,@e_address,@idcard,@phone,@jobID,@depID)";
+                var result = c.Execute(sql, new { name, dob, sex, e_address, idcard, phone, jobID, depID });
+                if (result >= 1)
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
             return false;
         }
 
         public bool editEmployee(int e_id,string name,string idcard,string sex, DateTime dob, string e_address, string phone, int jobID, int depID)
         {
+            try { 
             string connect = "Server=.\\SQLEXPRESS;Database=quanlynhansu;Trusted_Connection=True;";
             SqlConnection c = new SqlConnection(connect);
             string sql = "update Employee set idcard=@idcard,sex=@sex, name=@name ,dob=@dob,e_address=@e_address,phone=@phone,jobID=@jobID,depID=@depID where e_id=@e_id";
             var result = c.Execute(sql, new { e_id,idcard,name, dob, e_address, phone, jobID, depID,sex });
             if (result >= 1)
                 return true;
-            return false;
+            }
+            catch
+            {
+                return false;
+            }
+                return false;
         }
 
 

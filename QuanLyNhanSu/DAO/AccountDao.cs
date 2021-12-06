@@ -25,14 +25,20 @@ namespace QuanLyNhanSu.DAO
 
         public bool addAccount(string username, string pass, string fullname, string role)
         {
-        
+
+            try { 
             string connect = "Server=.\\SQLEXPRESS;Database=quanlynhansu;Trusted_Connection=True;";
             SqlConnection c = new SqlConnection(connect);
             string sql = "insert into Account values(@username,@pass,@fullname,@role)";
             int result = c.Execute(sql, new { username, pass, fullname , role });
             if (result >= 1)
                 return true;
-            return false;
+            }
+            catch
+            {
+                return false;
+            }
+                return false;
         }
 
         public bool deleteAccount(int a_id)
